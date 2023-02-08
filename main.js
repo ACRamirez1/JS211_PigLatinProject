@@ -13,9 +13,50 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
-  // Your code here
+  // word = "car" // take the c off the front, add it to the end and add ay = arcay
 
-}
+  // Your code here
+  
+  // 1. if word begins with a vowel, adds "yay"
+  // 2. if word begins with a consonant, splice off beginning, and add it to the end oand add "ay" 
+  // 3. maybe?  if word begins with 2 consonant, splice off beginning, and add it to the end oand add "ay" 
+  // assumptions : vowels are a e i o u 
+
+  // ncludes (searchString, position)
+   //string.slice(start, end) text.slice(0,1)
+
+  // var that'ss trimmed and lowercase
+  word = word.trim().toLowerCase();
+  // array of vowels to compare to the word
+    let vowels = [ 'a', 'e', 'i', 'o', 'u'];
+  
+
+  for(let letter = 0; letter < word.length; letter++) {
+//loop through the letter in the workd and find the first vowel
+    // does the first lettershow up in the vowels
+
+  if (vowels.includes(word[0])){
+    // if true, return word + yay
+    return word + "yay";
+  } else if (((!vowels.includes(word[0]))) && (!vowels.includes(word[1]))) {
+    // new var for word to maipulate
+    let newWord = word.slice(2) + word.slice(0, 2) + "ay";
+    return newWord
+  } else {
+
+    let newWord = word.slice(1) + word.slice(0,1) + "ay";
+
+    return newWord
+  }
+
+    
+    //slice the first letter, concat that letter to the end , and add ay
+    
+    
+
+  }
+
+  }
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
@@ -29,7 +70,7 @@ const getPrompt = () => {
 
 // Unit Tests
 // to use them run the command: npm test main.js
-// to close them ctrl + C
+// to close them ctrl + C   
 if (typeof describe === 'function') {
 
   describe('#pigLatin()', () => {
