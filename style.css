@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.whole-container {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.header-title{
+    font-size: 60px;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+}
+
+textarea {
+    font-family: cursive;
+    font-size:15px;
+
+}
+
+
+.img-header {
+    max-width: 50%;
+}
+
+header, .pig-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.piggieface {
+    max-width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-output{
+    height: 100px;
+    width: 400px;
+    background-color: pink;
+}
