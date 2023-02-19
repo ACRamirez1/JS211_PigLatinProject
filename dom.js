@@ -6,7 +6,7 @@ const userInput = document.getElementById('userInput');
 const button = document.getElementById('button')
 const reset = document.getElementById('reset')
 const textOutput = document.getElementById('textOutput')
-const pigButton = document.getElementsByClassName('piggieface')
+// const pigButton = document.getElementsByClassName('piggieface')
 console.log(button)
 
 
@@ -16,7 +16,8 @@ userInput.addEventListener('keyup', (event) => {
 })
 
 button.addEventListener('click', (event) => {
-  let newWord = pigLatin(input)
+  let words = input.split(' ')
+  let newWord = words.map(word => pigLatin(word)).join(' ')
   textOutput.innerText = newWord
 })
 
